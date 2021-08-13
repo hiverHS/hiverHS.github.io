@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>アカウント作成・ログインシステム</title>
+            <link rel="stylesheet" href="acreate.css">
+        </head>
+
+        <body>
+            <header>
+                <h1 style="margin:1em 0 0 1em ;">アカウント作成・ログインシステム</h1>
+            </header>
+
+                <div class="contents">
+                    <main>
+                        <p class="item">仕様</p>
+                            <p>１．アカウント作成ページにて以下情報を入力。<br>
+                            <span style="margin-left: 1.5em;">（アカウント作成済みの場合は"ログインページへ"ボタンでログインページへ移行。）</span></p>
+                            <p style="margin-left: 3em;">・ユーザーID</p>
+                            <p style="margin-left: 3em;">・名前</p>
+                            <p style="margin-left: 3em;">・生年月日</p>
+                            <p style="margin-left: 3em;">・メールアドレス</p>
+                            <p style="margin-left: 3em;">・パスワード(preg_match()関数により入力内容を指定。)</p>
+                            <p style="margin-left: 3em;">・確認用パスワード</p>
+ 
+                            <p style="margin:1em 0 0 1em; ">１-１．全ての情報の入力及び"パスワード"と"確認用パスワード"が一致した場合に<br>
+                            <span style="margin-left: 3.5em;">"登録情報の確認"ボタンから登録情報の確認ページへ移行。</span></p>
+
+                            <p style="margin-top:1em;">２．登録情報の確認ページにて入力情報を確認。問題がなければ"登録してログイン"ボタンでマイページへ移行。<br>
+                            <span style="margin-left: 2em;">ユーザーIDが重複していた場合はエラーを表示。"入力情報の修正"ボタンでアカウント作成ページへ移行。</span><br>
+                            <span style="margin-left: 1.5em;">（登録時にPassword hash()関数によりパスワードをハッシュ化）</span></p>
+
+                            <p style="margin-top:1em;">3．ログインページにてユーザーIDとパスワードを入力。両方一致した場合に"ログイン"ボタンでマイページへ移行。</p>
+
+                            <p style="margin-top:1em;">4．マイページにてユーザーIDに付随した各情報を表示。"ログアウト"ボタンでログアウトします。</p>
+ 
+                        <p class="item">リンク</p>
+                            <a href="https://acreatesystem.herokuapp.com/entry.php" target="_blank" rel="noopener noreferrer">https://acreatesystem.herokuapp.com/entry.php</a>
+ 
+                        <p class="item">ソースコード</p>
+                            <a href="https://github.com/hiverHS/acreatesystem" target="_blank" rel="noopener noreferrer">https://github.com/hiverHS/acreatesystem</a>
+
+                        <p class="item">使用技術</p>
+                            <p style="margin-top: 0.5px;">HTML・CSS・PHP・MySQL</p>
+ 
+                        <p class="item">作成した経緯</p>
+                            <p style="margin-top: 0.5px;">PHPとDBを用いたシステムを作成したかったため。</p>
+ 
+                        <p class="item">こだわった点</p>
+                            <p>１．誤ってページを更新した際に入力した情報が消えないように入力情報を保持。<br>
+                            <span style="margin-left: 2em;">また、入力情報の修正時に入力情報を引き渡すようにしています。(SESSION変数を使用。)</span></p>
+                            <p style="margin-top:1em;">２．ログインしていない状態でのマイページやログアウト画面へのアクセスが出来ないようにしています。(SESSION変数を使用。)</p>
+ 
+                        <p class="item">改善点</p>
+                            <p>１．表示をスマートフォン対応できるようにする。</p>
+                            <p style="margin-top:1em;">２．生年月日の入力をうるう年や月末が31日でない場合など存在しない日で登録できてしまうため、<br>
+                            <span style="margin-left: 2em;">誤った情報を入力できないよう改善が必要。</span></p>
+ 
+                        <p class="item" style="margin-bottom: 0.5px;">参考にしたサイト及び文献</p>
+                            <p style="margin:0.5px 0 1px 0;">１．基礎からのMySQL 第3版</p>
+                            <p style="margin:1px 0 1px 0;">２．入力値の引継ぎ| GRAYCODE PHPプログラミング</p>
+                            <a style="margin-left:2em;" href="https://gray-code.com/php/make-the-form-vol4/" target="_blank" rel="noopener noreferrer">https://gray-code.com/php/make-the-form-vol4/</a>
+                            <p style="margin:1px 0 1px 0;">３．PHP5.5から使える暗号化「password_hash」を「password_compact」を使って以前のバージョンで利用する– RのWeb制作</p>
+                            <a style="margin-left:2em;" href="http://webmaking.rei-farms.jp/webmaking/2752/" target="_blank" rel="noopener noreferrer">http://webmaking.rei-farms.jp/webmaking/2752/</a>
+                            <p style="margin:1px 0 1px 0;">４．PHPのpassword_verifyメソッドの使い方を現役エンジニアが解説【初心者向け】 | TechAcademyマガジン</p>
+                            <a style="margin-left:2em;" href="https://techacademy.jp/magazine/21722" target="_blank" rel="noopener noreferrer">https://techacademy.jp/magazine/21722</a>
+                    </main>
+                </div>
+            <footer>
+            </footer>
+        </body>
+    </html>
