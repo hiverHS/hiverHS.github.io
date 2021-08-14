@@ -57,7 +57,7 @@ h1{
 .list2{
     position: absolute;
     left: 50%;
-    right: +200px;
+    margin-left: -1em;
     display: inline-block;
     font-size: 18px;
     margin-top: 10px;
